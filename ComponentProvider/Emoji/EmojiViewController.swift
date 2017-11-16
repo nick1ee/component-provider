@@ -2,7 +2,7 @@
 //  EmojiViewController.swift
 //  ComponentProvider
 //
-//  Created by 許郁棋 on 16/11/2017.
+//  Created by Roy Hsu on 16/11/2017.
 //  Copyright © 2017 TinyWorld. All rights reserved.
 //
 
