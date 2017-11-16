@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B02DD1EA1FBDE7E8003E2D69 /* EmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02DD1E91FBDE7E8003E2D69 /* EmojiViewController.swift */; };
 		B0A7FC0F1FBDCF4700F90D9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC0E1FBDCF4700F90D9C /* AppDelegate.swift */; };
 		B0A7FC161FBDCF4700F90D9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A7FC151FBDCF4700F90D9C /* Assets.xcassets */; };
 		B0A7FC191FBDCF4700F90D9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A7FC171FBDCF4700F90D9C /* LaunchScreen.storyboard */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B02DD1E91FBDE7E8003E2D69 /* EmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewController.swift; sourceTree = "<group>"; };
 		B0A7FC0B1FBDCF4700F90D9C /* ComponentProvider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComponentProvider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A7FC0E1FBDCF4700F90D9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0A7FC151FBDCF4700F90D9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +49,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B02DD1E41FBDE78F003E2D69 /* Emoji */ = {
+			isa = PBXGroup;
+			children = (
+				B02DD1E91FBDE7E8003E2D69 /* EmojiViewController.swift */,
+			);
+			path = Emoji;
+			sourceTree = "<group>";
+		};
 		B0A7FC021FBDCF4700F90D9C = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				B0A7FC201FBDD04100F90D9C /* Component */,
+				B02DD1E41FBDE78F003E2D69 /* Emoji */,
 				B0A7FC0E1FBDCF4700F90D9C /* AppDelegate.swift */,
 				B0A7FC151FBDCF4700F90D9C /* Assets.xcassets */,
 				B0A7FC171FBDCF4700F90D9C /* LaunchScreen.storyboard */,
@@ -162,6 +173,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0A7FC2A1FBDD08200F90D9C /* ComponentProvider.swift in Sources */,
+				B02DD1EA1FBDE7E8003E2D69 /* EmojiViewController.swift in Sources */,
 				B0A7FC2C1FBDD08200F90D9C /* Component.swift in Sources */,
 				B0A7FC0F1FBDCF4700F90D9C /* AppDelegate.swift in Sources */,
 				B0A7FC2E1FBDD08200F90D9C /* ComponentProviderDelegate.swift in Sources */,

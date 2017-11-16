@@ -27,11 +27,11 @@ public final class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         
-        let viewController = UIViewController()
+        let emojiViewController = EmojiViewController()
         
-        viewController.view.backgroundColor = .white
+        emojiViewController.label.text = "😀"
         
-        window.rootViewController = viewController
+        window.rootViewController = emojiViewController
         
         window.makeKeyAndVisible()
         
