@@ -10,11 +10,12 @@
 
 import UIKit
 
+// Override this base view controller and provide a dedicated component composer.
 open class ComponentBasedViewController: UITableViewController {
     
     // MARK: Property
     
-    open var componentComposer: ComponentComposer?
+    public final var componentComposer: ComponentComposer?
     
     // MARK: Init
     
@@ -24,7 +25,9 @@ open class ComponentBasedViewController: UITableViewController {
     
     // MARK: View Life Cycle
     
+    // You can override this method for basic setup. DO NOT forgot to call the super.
     open override func viewDidLoad() {
+        
         super.viewDidLoad()
         
         setUpTableView(tableView)
@@ -46,6 +49,7 @@ open class ComponentBasedViewController: UITableViewController {
     
     // MARK: UITableViewDataSource
     
+    // Map one section to one component provider.
     public final override func numberOfSections(in tableView: UITableView) -> Int {
         
         return componentComposer?.componentProviders.count ?? 0
@@ -171,37 +175,10 @@ extension ComponentBasedViewController: ComponentProviderDelegate {
         
     }
     
-    public final func provider(
+    // Override this method for custom error hanlding.
+    open func provider(
         _ provider: ComponentProvider,
         didFailWith error: Error
-    ) {
-        
-        let alertController = UIAlertController(
-            title: NSLocalizedString(
-                "Something went wrong.",
-                comment: ""
-            ),
-            message: error.localizedDescription,
-            preferredStyle: .alert
-        )
-        
-        let okAction = UIAlertAction(
-            title: NSLocalizedString(
-                "OK",
-                comment: ""
-            ),
-            style: .cancel,
-            handler: nil
-        )
-        
-        alertController.addAction(okAction)
-        
-        present(
-            alertController,
-            animated: true,
-            completion: nil
-        )
-        
-    }
+    ) { }
     
 }
