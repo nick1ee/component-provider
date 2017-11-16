@@ -14,7 +14,18 @@ public final class EmojiComponentProvider: ComponentProvider {
     
     // MARK: Property
     
-    public final let emojiComponent = EmojiComponent(emoji: nil)
+    public final var emojiComponent: EmojiComponent = EmojiComponent(emoji: nil) {
+        
+        didSet {
+            
+            setUpEmojiComponent(
+                emojiComponent,
+                for: emojiViewController
+            )
+            
+        }
+        
+    }
     
     public final let emojiViewController = EmojiViewController()
     
@@ -25,6 +36,19 @@ public final class EmojiComponentProvider: ComponentProvider {
     public final weak var componentProviderDelegate: ComponentProviderDelegate?
     
     public final var contentSize: CGSize = .zero
+    
+    // MARK: Init
+    
+    public init() {
+        
+        setUpEmojiComponent(
+            emojiComponent,
+            for: emojiViewController
+        )
+        
+    }
+    
+    // MARK: Update
     
     public final func update() {
         
@@ -38,5 +62,12 @@ public final class EmojiComponentProvider: ComponentProvider {
         componentProviderDelegate?.providerDidUpdate(self)
         
     }
+    
+    // MARK: Set Up
+    
+    fileprivate final func setUpEmojiComponent(
+        _ emojiComponent: EmojiComponent,
+        for emojiViewController: EmojiViewController
+    ) { emojiViewController.label.text = emojiComponent.emoji }
 
 }

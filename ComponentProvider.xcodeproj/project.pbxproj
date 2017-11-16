@@ -10,6 +10,8 @@
 		B02DD1EA1FBDE7E8003E2D69 /* EmojiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02DD1E91FBDE7E8003E2D69 /* EmojiViewController.swift */; };
 		B02DD1EC1FBDEE09003E2D69 /* EmojiComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02DD1EB1FBDEE09003E2D69 /* EmojiComponent.swift */; };
 		B02DD1EE1FBDEE5A003E2D69 /* EmojiComponentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02DD1ED1FBDEE5A003E2D69 /* EmojiComponentProvider.swift */; };
+		B02DD1F01FBDF050003E2D69 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02DD1EF1FBDF050003E2D69 /* LandingViewController.swift */; };
+		B02DD1F21FBDF0BB003E2D69 /* LandingComponentComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B02DD1F11FBDF0BB003E2D69 /* LandingComponentComposer.swift */; };
 		B0A7FC0F1FBDCF4700F90D9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC0E1FBDCF4700F90D9C /* AppDelegate.swift */; };
 		B0A7FC161FBDCF4700F90D9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0A7FC151FBDCF4700F90D9C /* Assets.xcassets */; };
 		B0A7FC191FBDCF4700F90D9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B0A7FC171FBDCF4700F90D9C /* LaunchScreen.storyboard */; };
@@ -27,6 +29,8 @@
 		B02DD1E91FBDE7E8003E2D69 /* EmojiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiViewController.swift; sourceTree = "<group>"; };
 		B02DD1EB1FBDEE09003E2D69 /* EmojiComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiComponent.swift; sourceTree = "<group>"; };
 		B02DD1ED1FBDEE5A003E2D69 /* EmojiComponentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiComponentProvider.swift; sourceTree = "<group>"; };
+		B02DD1EF1FBDF050003E2D69 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		B02DD1F11FBDF0BB003E2D69 /* LandingComponentComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingComponentComposer.swift; sourceTree = "<group>"; };
 		B0A7FC0B1FBDCF4700F90D9C /* ComponentProvider.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComponentProvider.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B0A7FC0E1FBDCF4700F90D9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B0A7FC151FBDCF4700F90D9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -85,6 +89,8 @@
 				B0A7FC201FBDD04100F90D9C /* Component */,
 				B02DD1E41FBDE78F003E2D69 /* Emoji */,
 				B0A7FC0E1FBDCF4700F90D9C /* AppDelegate.swift */,
+				B02DD1F11FBDF0BB003E2D69 /* LandingComponentComposer.swift */,
+				B02DD1EF1FBDF050003E2D69 /* LandingViewController.swift */,
 				B0A7FC151FBDCF4700F90D9C /* Assets.xcassets */,
 				B0A7FC171FBDCF4700F90D9C /* LaunchScreen.storyboard */,
 				B0A7FC1A1FBDCF4700F90D9C /* Info.plist */,
@@ -185,10 +191,12 @@
 				B0A7FC0F1FBDCF4700F90D9C /* AppDelegate.swift in Sources */,
 				B0A7FC2E1FBDD08200F90D9C /* ComponentProviderDelegate.swift in Sources */,
 				B0A7FC301FBDD0A800F90D9C /* Identifiable.swift in Sources */,
+				B02DD1F21FBDF0BB003E2D69 /* LandingComponentComposer.swift in Sources */,
 				B0A7FC2D1FBDD08200F90D9C /* ComponentComposer.swift in Sources */,
 				B0A7FC291FBDD08200F90D9C /* ComponentTableViewCell.swift in Sources */,
 				B02DD1EC1FBDEE09003E2D69 /* EmojiComponent.swift in Sources */,
 				B0A7FC2B1FBDD08200F90D9C /* ComponentBasedViewController.swift in Sources */,
+				B02DD1F01FBDF050003E2D69 /* LandingViewController.swift in Sources */,
 				B0A7FC281FBDD08200F90D9C /* ComponentComposer+IndexPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

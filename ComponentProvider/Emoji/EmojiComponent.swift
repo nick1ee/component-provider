@@ -12,6 +12,6 @@ public struct EmojiComponent: Component {
     
     // MARK: Property
     
-    public let emoji: String?
+    public var emoji: String?
     
 }
