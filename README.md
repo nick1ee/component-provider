@@ -1,1 +1,1 @@
-# component-provider
+# Component Provider
