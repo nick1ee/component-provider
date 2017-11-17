@@ -12,10 +12,10 @@ import UIKit
 
 public protocol ComponentProviderDelegate: class {
     
-    func providerDidUpdate(_ provider: ComponentProvider)
+    func componentProviderDidUpdate(_ componentProvider: ComponentProvider)
     
-    func provider(
-        _ provider: ComponentProvider,
+    func componentProvider(
+        _ componentProvider: ComponentProvider,
         didFailWith error: Error
     )
     

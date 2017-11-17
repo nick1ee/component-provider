@@ -12,10 +12,6 @@ import Foundation
 
 public extension ComponentComposer {
     
-    public func componentProvider(for indexPath: IndexPath) -> ComponentProvider {
-        
-        return componentProviders[indexPath.section]
-        
-    }
+    public func componentProvider(for indexPath: IndexPath) -> ComponentProvider { return componentProvider(at: indexPath.section) }
     
 }

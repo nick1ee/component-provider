@@ -52,7 +52,7 @@ open class ComponentBasedViewController: UITableViewController {
     // Map one section to one component provider.
     public final override func numberOfSections(in tableView: UITableView) -> Int {
         
-        return componentComposer?.componentProviders.count ?? 0
+        return componentComposer?.numberOfComponentProviders() ?? 0
         
     }
     
@@ -155,13 +155,10 @@ open class ComponentBasedViewController: UITableViewController {
 
 extension ComponentBasedViewController: ComponentProviderDelegate {
     
-    public final func providerDidUpdate(_ provider: ComponentProvider) {
+    public final func componentProviderDidUpdate(_ componentProvider: ComponentProvider) {
         
         guard
-            let componentProviders = componentComposer?.componentProviders,
-            let index = componentProviders.index(
-                where: { $0.componentViewController === provider.componentViewController }
-            )
+            let index = componentComposer?.index(of: componentProvider)
         else { return }
 
         tableView.beginUpdates()
@@ -176,8 +173,8 @@ extension ComponentBasedViewController: ComponentProviderDelegate {
     }
     
     // Override this method for custom error hanlding.
-    open func provider(
-        _ provider: ComponentProvider,
+    open func componentProvider(
+        _ componentProvider: ComponentProvider,
         didFailWith error: Error
     ) { }
     

@@ -12,6 +12,10 @@ import UIKit
 
 public protocol ComponentComposer {
     
-    var componentProviders: [ComponentProvider] { get }
+    func numberOfComponentProviders() -> Int
+    
+    func componentProvider(at index: Int) -> ComponentProvider
+    
+    func index(of componentProvider: ComponentProvider) -> Int?
     
 }

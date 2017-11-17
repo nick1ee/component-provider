@@ -14,4 +14,24 @@ public final class LandingComponentComposer: ComponentComposer {
     
     public final var componentProviders: [ComponentProvider] = []
     
+    // MARK: ComponentComposer
+    
+    public final func numberOfComponentProviders() -> Int {
+        
+        return componentProviders.count
+        
+    }
+    
+    public final func componentProvider(at index: Int) -> ComponentProvider {
+        
+        return componentProviders[index]
+        
+    }
+    
+    public func index(of componentProvider: ComponentProvider) -> Int? {
+        
+        return componentProviders.index { $0 === componentProvider }
+        
+    }
+    
 }

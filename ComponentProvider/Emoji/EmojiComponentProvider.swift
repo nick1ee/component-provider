@@ -59,7 +59,7 @@ public final class EmojiComponentProvider: ComponentProvider {
             size: contentSize
         )
         
-        componentProviderDelegate?.providerDidUpdate(self)
+        componentProviderDelegate?.componentProviderDidUpdate(self)
         
     }
     
