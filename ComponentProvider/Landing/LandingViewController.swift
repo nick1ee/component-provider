@@ -49,19 +49,11 @@ public final class LandingViewController: ComponentBasedViewController {
 
         super.viewDidAppear(animated)
 
-        emojiComponentProvider.contentSize = CGSize(
-            width: view.bounds.width,
-            height: 150.0
-        )
+        emojiComponentProvider.contentSize.width = view.bounds.width
 
         emojiComponentProvider.update()
 
-        let estimatedHeight: CGFloat = 44.0
-
-        postListComponentProvider.contentSize = CGSize(
-            width: view.bounds.width,
-            height: estimatedHeight
-        )
+        postListComponentProvider.contentSize.width = view.bounds.width
 
         postListComponentProvider.update()
 

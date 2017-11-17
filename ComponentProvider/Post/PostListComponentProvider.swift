@@ -35,7 +35,7 @@ public final class PostListComponentProvider: ComponentProvider {
 
     public final weak var componentProviderDelegate: ComponentProviderDelegate?
 
-    public final var contentSize: CGSize = .zero {
+    public final var contentSize: CGSize {
 
         didSet {
 
@@ -67,8 +67,18 @@ public final class PostListComponentProvider: ComponentProvider {
 
         self.postListComponent = PostListComponent()
 
+        self.contentSize = CGSize(
+            width: 0.0,
+            height: 44.0
+        )
+
         setUpPostListComponent(
             postListComponent,
+            for: postListTableViewController
+        )
+
+        setUpContentSize(
+            contentSize,
             for: postListTableViewController
         )
 

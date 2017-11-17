@@ -35,7 +35,18 @@ public final class EmojiComponentProvider: ComponentProvider {
 
     public final weak var componentProviderDelegate: ComponentProviderDelegate?
 
-    public final var contentSize: CGSize = .zero
+    public final var contentSize: CGSize {
+
+        didSet {
+
+            setUpContentSize(
+                contentSize,
+                for: emojiViewController
+            )
+
+        }
+
+    }
 
     // MARK: Init
 
@@ -43,8 +54,18 @@ public final class EmojiComponentProvider: ComponentProvider {
 
         self.emojiComponent = EmojiComponent(emoji: nil)
 
+        self.contentSize = CGSize(
+            width: 0.0,
+            height: 150.0
+        )
+
         setUpEmojiComponent(
             emojiComponent,
+            for: emojiViewController
+        )
+
+        setUpContentSize(
+            contentSize,
             for: emojiViewController
         )
 
@@ -73,5 +94,17 @@ public final class EmojiComponentProvider: ComponentProvider {
         _ component: EmojiComponent,
         for viewController: EmojiViewController
     ) { viewController.label.text = component.emoji }
+
+    fileprivate final func setUpContentSize(
+        _ contentSize: CGSize,
+        for viewController: EmojiViewController
+    ) {
+
+        viewController.view.frame = CGRect(
+            origin: .zero,
+            size: contentSize
+        )
+
+    }
 
 }
