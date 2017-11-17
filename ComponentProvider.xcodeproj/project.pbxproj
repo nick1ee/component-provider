@@ -22,7 +22,7 @@
 		B0A7FC2C1FBDD08200F90D9C /* Component.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC251FBDD08200F90D9C /* Component.swift */; };
 		B0A7FC2D1FBDD08200F90D9C /* ComponentComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC261FBDD08200F90D9C /* ComponentComposer.swift */; };
 		B0A7FC2E1FBDD08200F90D9C /* ComponentProviderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC271FBDD08200F90D9C /* ComponentProviderDelegate.swift */; };
-		B0A7FC301FBDD0A800F90D9C /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC2F1FBDD0A800F90D9C /* Identifiable.swift */; };
+		B0A7FC351FBE74EB00F90D9C /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC341FBE74EB00F90D9C /* Identifiable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +43,7 @@
 		B0A7FC251FBDD08200F90D9C /* Component.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Component.swift; sourceTree = "<group>"; };
 		B0A7FC261FBDD08200F90D9C /* ComponentComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentComposer.swift; sourceTree = "<group>"; };
 		B0A7FC271FBDD08200F90D9C /* ComponentProviderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentProviderDelegate.swift; sourceTree = "<group>"; };
-		B0A7FC2F1FBDD0A800F90D9C /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		B0A7FC341FBE74EB00F90D9C /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,9 +88,9 @@
 			children = (
 				B0A7FC201FBDD04100F90D9C /* Component */,
 				B02DD1E41FBDE78F003E2D69 /* Emoji */,
+				B0A7FC321FBE74AA00F90D9C /* Landing */,
+				B0A7FC331FBE74EB00F90D9C /* Library */,
 				B0A7FC0E1FBDCF4700F90D9C /* AppDelegate.swift */,
-				B02DD1F11FBDF0BB003E2D69 /* LandingComponentComposer.swift */,
-				B02DD1EF1FBDF050003E2D69 /* LandingViewController.swift */,
 				B0A7FC151FBDCF4700F90D9C /* Assets.xcassets */,
 				B0A7FC171FBDCF4700F90D9C /* LaunchScreen.storyboard */,
 				B0A7FC1A1FBDCF4700F90D9C /* Info.plist */,
@@ -101,7 +101,6 @@
 		B0A7FC201FBDD04100F90D9C /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				B0A7FC2F1FBDD0A800F90D9C /* Identifiable.swift */,
 				B0A7FC251FBDD08200F90D9C /* Component.swift */,
 				B0A7FC231FBDD08200F90D9C /* ComponentProvider.swift */,
 				B0A7FC271FBDD08200F90D9C /* ComponentProviderDelegate.swift */,
@@ -111,6 +110,23 @@
 				B0A7FC241FBDD08200F90D9C /* ComponentBasedViewController.swift */,
 			);
 			path = Component;
+			sourceTree = "<group>";
+		};
+		B0A7FC321FBE74AA00F90D9C /* Landing */ = {
+			isa = PBXGroup;
+			children = (
+				B02DD1F11FBDF0BB003E2D69 /* LandingComponentComposer.swift */,
+				B02DD1EF1FBDF050003E2D69 /* LandingViewController.swift */,
+			);
+			path = Landing;
+			sourceTree = "<group>";
+		};
+		B0A7FC331FBE74EB00F90D9C /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				B0A7FC341FBE74EB00F90D9C /* Identifiable.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,13 +224,13 @@
 				B0A7FC2C1FBDD08200F90D9C /* Component.swift in Sources */,
 				B0A7FC0F1FBDCF4700F90D9C /* AppDelegate.swift in Sources */,
 				B0A7FC2E1FBDD08200F90D9C /* ComponentProviderDelegate.swift in Sources */,
-				B0A7FC301FBDD0A800F90D9C /* Identifiable.swift in Sources */,
 				B02DD1F21FBDF0BB003E2D69 /* LandingComponentComposer.swift in Sources */,
 				B0A7FC2D1FBDD08200F90D9C /* ComponentComposer.swift in Sources */,
 				B0A7FC291FBDD08200F90D9C /* ComponentTableViewCell.swift in Sources */,
 				B02DD1EC1FBDEE09003E2D69 /* EmojiComponent.swift in Sources */,
 				B0A7FC2B1FBDD08200F90D9C /* ComponentBasedViewController.swift in Sources */,
 				B02DD1F01FBDF050003E2D69 /* LandingViewController.swift in Sources */,
+				B0A7FC351FBE74EB00F90D9C /* Identifiable.swift in Sources */,
 				B0A7FC281FBDD08200F90D9C /* ComponentComposer+IndexPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
