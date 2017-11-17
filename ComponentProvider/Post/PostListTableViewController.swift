@@ -44,9 +44,16 @@ public final class PostListTableViewController: UITableViewController {
     fileprivate final func setUpTableView(_ tableView: UITableView) {
 
         tableView.register(
-            PostTableViewCell.self,
+            UINib(
+                nibName: PostTableViewCell.identifier,
+                bundle: nil
+            ),
             forCellReuseIdentifier: PostTableViewCell.identifier
         )
+
+        tableView.estimatedRowHeight = 122.0
+
+        tableView.rowHeight = UITableViewAutomaticDimension
 
     }
 
@@ -66,18 +73,6 @@ public final class PostListTableViewController: UITableViewController {
 
     public final override func tableView(
         _ tableView: UITableView,
-        estimatedHeightForRowAt indexPath: IndexPath
-    )
-    -> CGFloat { return 44.0 }
-
-    public final override func tableView(
-        _ tableView: UITableView,
-        heightForRowAt indexPath: IndexPath
-    )
-    -> CGFloat { return UITableViewAutomaticDimension }
-
-    public final override func tableView(
-        _ tableView: UITableView,
         cellForRowAt indexPath: IndexPath
     )
     -> UITableViewCell {
@@ -91,9 +86,10 @@ public final class PostListTableViewController: UITableViewController {
 
         let post = postDataProvider?.post(at: indexPath)
 
-        cell.textLabel?.text = post?.content ?? ""
+        // Note: Prevent using the built-in properties inside a cell for self-sizing, such as textLabel, detailTextLabel, imageView.
+        // Reference: https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithSelf-SizingTableViewCells.html
 
-        cell.textLabel?.numberOfLines = 0
+        cell.contentLabel?.text = post?.content ?? ""
 
         cell.selectionStyle = .none
 

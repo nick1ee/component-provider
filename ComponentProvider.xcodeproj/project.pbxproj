@@ -31,6 +31,7 @@
 		B0A7FC421FBE88E300F90D9C /* PostListComponentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC411FBE88E300F90D9C /* PostListComponentProvider.swift */; };
 		B0A7FC441FBE891400F90D9C /* PostListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC431FBE891400F90D9C /* PostListComponent.swift */; };
 		B0A7FC461FBE8E7800F90D9C /* MockPostDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC451FBE8E7800F90D9C /* MockPostDataProvider.swift */; };
+		B0A7FC481FBEACE000F90D9C /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B0A7FC471FBEACE000F90D9C /* PostTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		B0A7FC411FBE88E300F90D9C /* PostListComponentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListComponentProvider.swift; sourceTree = "<group>"; };
 		B0A7FC431FBE891400F90D9C /* PostListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListComponent.swift; sourceTree = "<group>"; };
 		B0A7FC451FBE8E7800F90D9C /* MockPostDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostDataProvider.swift; sourceTree = "<group>"; };
+		B0A7FC471FBEACE000F90D9C /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				B0A7FC381FBE867500F90D9C /* Post.swift */,
+				B0A7FC471FBEACE000F90D9C /* PostTableViewCell.xib */,
 				B0A7FC371FBE867500F90D9C /* PostTableViewCell.swift */,
 				B0A7FC391FBE867500F90D9C /* PostListTableViewController.swift */,
 				B0A7FC3D1FBE87B900F90D9C /* PostDataProvider.swift */,
@@ -221,6 +224,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0A7FC481FBEACE000F90D9C /* PostTableViewCell.xib in Resources */,
 				B0A7FC191FBDCF4700F90D9C /* LaunchScreen.storyboard in Resources */,
 				B0A7FC161FBDCF4700F90D9C /* Assets.xcassets in Resources */,
 			);

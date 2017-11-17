@@ -10,7 +10,31 @@
 
 import UIKit
 
-public final class PostTableViewCell: UITableViewCell { }
+public final class PostTableViewCell: UITableViewCell {
+
+    // MARK: Property
+
+    @IBOutlet public private(set) final weak var contentLabel: UILabel!
+
+    // MARK: Life Cycle
+
+    public final override func awakeFromNib() {
+
+        setUpContentLabel(contentLabel)
+
+    }
+
+    // MARK: Set Up
+
+    fileprivate final func setUpContentLabel(_ contentLabel: UILabel) {
+
+        contentLabel.text = ""
+
+        contentLabel.numberOfLines = 0
+
+    }
+
+}
 
 // MARK: - Identifiable
 

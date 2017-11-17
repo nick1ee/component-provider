@@ -67,10 +67,18 @@ public final class PostListComponentProvider: ComponentProvider {
 
         self.postListComponent = PostListComponent()
 
+        // Walkaround: DO NOT set a value that is too small to calculate content size of table view.
+        // Reference:
+        // 1. https://developer.apple.com/library/content/documentation/UserExperience/Conceptual/AutolayoutPG/WorkingwithSelf-SizingTableViewCells.html
+        // 2. https://useyourloaf.com/blog/self-sizing-table-view-cells/
+        // 3. https://stackoverflow.com/questions/9958328/when-does-a-uitableviews-contentsize-get-set/17939938#17939938
+        // 4. https://stackoverflow.com/questions/36002741/uitableview-content-size-while-using-auto-layout
         self.contentSize = CGSize(
             width: 0.0,
-            height: 44.0
+            height: UIScreen.main.bounds.height
         )
+
+        setUpPostListViewController(postListTableViewController)
 
         setUpPostListComponent(
             postListComponent,
@@ -106,6 +114,16 @@ public final class PostListComponentProvider: ComponentProvider {
 
     // MARK: Set Up
 
+    fileprivate final func setUpPostListViewController(_ viewController: PostListTableViewController) {
+
+        viewController.tableView.backgroundColor = .yellow
+
+        viewController.tableView.isScrollEnabled = false
+
+        viewController.tableView.contentInsetAdjustmentBehavior = .never
+
+    }
+
     fileprivate final func setUpPostListComponent(
         _ component: PostListComponent,
         for viewController: PostListTableViewController
@@ -115,8 +133,6 @@ public final class PostListComponentProvider: ComponentProvider {
         _ contentSize: CGSize,
         for viewController: PostListTableViewController
     ) {
-
-        print(#function, contentSize)
 
         viewController.view.frame = CGRect(
             origin: .zero,
@@ -140,9 +156,7 @@ extension PostListComponentProvider: PostDataProviderDelegate {
 
         let tableView = postListTableViewController.tableView!
 
-        tableView.backgroundColor = .yellow
-
-        tableView.reloadData()
+        tableView.layoutIfNeeded()
 
         contentSize = tableView.contentSize
 

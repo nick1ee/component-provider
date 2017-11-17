@@ -79,6 +79,8 @@ public final class EmojiComponentProvider: ComponentProvider {
 
         view.backgroundColor = .black
 
+        view.layoutIfNeeded()
+
         view.frame = CGRect(
             origin: .zero,
             size: contentSize
