@@ -14,7 +14,7 @@ public final class EmojiComponentProvider: ComponentProvider {
 
     // MARK: Property
 
-    public final var emojiComponent: EmojiComponent = EmojiComponent(emoji: nil) {
+    public final var emojiComponent: EmojiComponent {
 
         didSet {
 
@@ -41,6 +41,8 @@ public final class EmojiComponentProvider: ComponentProvider {
 
     public init() {
 
+        self.emojiComponent = EmojiComponent(emoji: nil)
+
         setUpEmojiComponent(
             emojiComponent,
             for: emojiViewController
@@ -66,8 +68,8 @@ public final class EmojiComponentProvider: ComponentProvider {
     // MARK: Set Up
 
     fileprivate final func setUpEmojiComponent(
-        _ emojiComponent: EmojiComponent,
-        for emojiViewController: EmojiViewController
-    ) { emojiViewController.label.text = emojiComponent.emoji }
+        _ component: EmojiComponent,
+        for viewController: EmojiViewController
+    ) { viewController.label.text = component.emoji }
 
 }

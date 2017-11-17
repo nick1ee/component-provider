@@ -23,6 +23,13 @@
 		B0A7FC2D1FBDD08200F90D9C /* ComponentComposer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC261FBDD08200F90D9C /* ComponentComposer.swift */; };
 		B0A7FC2E1FBDD08200F90D9C /* ComponentProviderDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC271FBDD08200F90D9C /* ComponentProviderDelegate.swift */; };
 		B0A7FC351FBE74EB00F90D9C /* Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC341FBE74EB00F90D9C /* Identifiable.swift */; };
+		B0A7FC3A1FBE867500F90D9C /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC371FBE867500F90D9C /* PostTableViewCell.swift */; };
+		B0A7FC3B1FBE867500F90D9C /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC381FBE867500F90D9C /* Post.swift */; };
+		B0A7FC3C1FBE867500F90D9C /* PostListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC391FBE867500F90D9C /* PostListTableViewController.swift */; };
+		B0A7FC3E1FBE87B900F90D9C /* PostDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC3D1FBE87B900F90D9C /* PostDataProvider.swift */; };
+		B0A7FC401FBE883D00F90D9C /* PostDataProvider+IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC3F1FBE883D00F90D9C /* PostDataProvider+IndexPath.swift */; };
+		B0A7FC421FBE88E300F90D9C /* PostListComponentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC411FBE88E300F90D9C /* PostListComponentProvider.swift */; };
+		B0A7FC441FBE891400F90D9C /* PostListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC431FBE891400F90D9C /* PostListComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +51,13 @@
 		B0A7FC261FBDD08200F90D9C /* ComponentComposer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentComposer.swift; sourceTree = "<group>"; };
 		B0A7FC271FBDD08200F90D9C /* ComponentProviderDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComponentProviderDelegate.swift; sourceTree = "<group>"; };
 		B0A7FC341FBE74EB00F90D9C /* Identifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Identifiable.swift; sourceTree = "<group>"; };
+		B0A7FC371FBE867500F90D9C /* PostTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		B0A7FC381FBE867500F90D9C /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		B0A7FC391FBE867500F90D9C /* PostListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostListTableViewController.swift; sourceTree = "<group>"; };
+		B0A7FC3D1FBE87B900F90D9C /* PostDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDataProvider.swift; sourceTree = "<group>"; };
+		B0A7FC3F1FBE883D00F90D9C /* PostDataProvider+IndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostDataProvider+IndexPath.swift"; sourceTree = "<group>"; };
+		B0A7FC411FBE88E300F90D9C /* PostListComponentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListComponentProvider.swift; sourceTree = "<group>"; };
+		B0A7FC431FBE891400F90D9C /* PostListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +102,7 @@
 			children = (
 				B0A7FC201FBDD04100F90D9C /* Component */,
 				B02DD1E41FBDE78F003E2D69 /* Emoji */,
+				B0A7FC361FBE866600F90D9C /* Post */,
 				B0A7FC321FBE74AA00F90D9C /* Landing */,
 				B0A7FC331FBE74EB00F90D9C /* Library */,
 				B0A7FC0E1FBDCF4700F90D9C /* AppDelegate.swift */,
@@ -127,6 +142,20 @@
 				B0A7FC341FBE74EB00F90D9C /* Identifiable.swift */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		B0A7FC361FBE866600F90D9C /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				B0A7FC381FBE867500F90D9C /* Post.swift */,
+				B0A7FC371FBE867500F90D9C /* PostTableViewCell.swift */,
+				B0A7FC391FBE867500F90D9C /* PostListTableViewController.swift */,
+				B0A7FC3D1FBE87B900F90D9C /* PostDataProvider.swift */,
+				B0A7FC3F1FBE883D00F90D9C /* PostDataProvider+IndexPath.swift */,
+				B0A7FC431FBE891400F90D9C /* PostListComponent.swift */,
+				B0A7FC411FBE88E300F90D9C /* PostListComponentProvider.swift */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,18 +249,25 @@
 			files = (
 				B0A7FC2A1FBDD08200F90D9C /* ComponentProvider.swift in Sources */,
 				B02DD1EE1FBDEE5A003E2D69 /* EmojiComponentProvider.swift in Sources */,
+				B0A7FC3A1FBE867500F90D9C /* PostTableViewCell.swift in Sources */,
 				B02DD1EA1FBDE7E8003E2D69 /* EmojiViewController.swift in Sources */,
 				B0A7FC2C1FBDD08200F90D9C /* Component.swift in Sources */,
 				B0A7FC0F1FBDCF4700F90D9C /* AppDelegate.swift in Sources */,
 				B0A7FC2E1FBDD08200F90D9C /* ComponentProviderDelegate.swift in Sources */,
 				B02DD1F21FBDF0BB003E2D69 /* LandingComponentComposer.swift in Sources */,
+				B0A7FC3E1FBE87B900F90D9C /* PostDataProvider.swift in Sources */,
 				B0A7FC2D1FBDD08200F90D9C /* ComponentComposer.swift in Sources */,
 				B0A7FC291FBDD08200F90D9C /* ComponentTableViewCell.swift in Sources */,
 				B02DD1EC1FBDEE09003E2D69 /* EmojiComponent.swift in Sources */,
+				B0A7FC3B1FBE867500F90D9C /* Post.swift in Sources */,
 				B0A7FC2B1FBDD08200F90D9C /* ComponentBasedViewController.swift in Sources */,
+				B0A7FC401FBE883D00F90D9C /* PostDataProvider+IndexPath.swift in Sources */,
 				B02DD1F01FBDF050003E2D69 /* LandingViewController.swift in Sources */,
 				B0A7FC351FBE74EB00F90D9C /* Identifiable.swift in Sources */,
+				B0A7FC3C1FBE867500F90D9C /* PostListTableViewController.swift in Sources */,
+				B0A7FC421FBE88E300F90D9C /* PostListComponentProvider.swift in Sources */,
 				B0A7FC281FBDD08200F90D9C /* ComponentComposer+IndexPath.swift in Sources */,
+				B0A7FC441FBE891400F90D9C /* PostListComponent.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
