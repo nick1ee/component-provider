@@ -97,6 +97,8 @@ public final class PostListTableViewController: UITableViewController {
 
         cell.selectionStyle = .none
 
+        cell.backgroundColor = .clear
+
         return cell
 
     }

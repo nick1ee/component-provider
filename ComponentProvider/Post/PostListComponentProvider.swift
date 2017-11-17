@@ -35,7 +35,18 @@ public final class PostListComponentProvider: ComponentProvider {
 
     public final weak var componentProviderDelegate: ComponentProviderDelegate?
 
-    public final var contentSize: CGSize = .zero
+    public final var contentSize: CGSize = .zero {
+
+        didSet {
+
+            setUpContentSize(
+                contentSize,
+                for: postListTableViewController
+            )
+
+        }
+
+    }
 
     public final weak var postDataProvider: PostDataProvider? {
 
@@ -90,6 +101,20 @@ public final class PostListComponentProvider: ComponentProvider {
         for viewController: PostListTableViewController
     ) { }
 
+    fileprivate final func setUpContentSize(
+        _ contentSize: CGSize,
+        for viewController: PostListTableViewController
+    ) {
+
+        print(#function, contentSize)
+
+        viewController.view.frame = CGRect(
+            origin: .zero,
+            size: contentSize
+        )
+
+    }
+
     fileprivate final func setUpPostDataProvider(
         _ dataProvider: PostDataProvider?,
         for viewController: PostListTableViewController
@@ -102,6 +127,14 @@ public final class PostListComponentProvider: ComponentProvider {
 extension PostListComponentProvider: PostDataProviderDelegate {
 
     public func dataProviderDidFetch(_ dataProvider: PostDataProvider) {
+
+        let tableView = postListTableViewController.tableView!
+
+        tableView.backgroundColor = .yellow
+
+        tableView.reloadData()
+
+        contentSize = tableView.contentSize
 
         componentProviderDelegate?.componentProviderDidUpdate(self)
 

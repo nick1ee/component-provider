@@ -16,6 +16,10 @@ public final class LandingViewController: ComponentBasedViewController {
 
     public final let emojiComponentProvider = EmojiComponentProvider()
 
+    public final let postListComponentProvider = PostListComponentProvider()
+
+    private final let postDataProvider = MockPostDataProvider()
+
     // MARK: View Life Cycle
 
     public final override func viewDidLoad() {
@@ -26,9 +30,16 @@ public final class LandingViewController: ComponentBasedViewController {
 
         emojiComponentProvider.emojiComponent.emoji = "😀"
 
+        postListComponentProvider.componentProviderDelegate = self
+
+        postListComponentProvider.postDataProvider = postDataProvider
+
         let landingComponentComposer = LandingComponentComposer()
 
-        landingComponentComposer.componentProviders = [ emojiComponentProvider ]
+        landingComponentComposer.componentProviders = [
+            emojiComponentProvider,
+            postListComponentProvider
+        ]
 
         self.componentComposer = landingComponentComposer
 
@@ -44,6 +55,15 @@ public final class LandingViewController: ComponentBasedViewController {
         )
 
         emojiComponentProvider.update()
+
+        let estimatedHeight: CGFloat = 44.0
+
+        postListComponentProvider.contentSize = CGSize(
+            width: view.bounds.width,
+            height: estimatedHeight
+        )
+
+        postListComponentProvider.update()
 
     }
 

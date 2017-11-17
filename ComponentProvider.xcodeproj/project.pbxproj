@@ -30,6 +30,7 @@
 		B0A7FC401FBE883D00F90D9C /* PostDataProvider+IndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC3F1FBE883D00F90D9C /* PostDataProvider+IndexPath.swift */; };
 		B0A7FC421FBE88E300F90D9C /* PostListComponentProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC411FBE88E300F90D9C /* PostListComponentProvider.swift */; };
 		B0A7FC441FBE891400F90D9C /* PostListComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC431FBE891400F90D9C /* PostListComponent.swift */; };
+		B0A7FC461FBE8E7800F90D9C /* MockPostDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0A7FC451FBE8E7800F90D9C /* MockPostDataProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		B0A7FC3F1FBE883D00F90D9C /* PostDataProvider+IndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PostDataProvider+IndexPath.swift"; sourceTree = "<group>"; };
 		B0A7FC411FBE88E300F90D9C /* PostListComponentProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListComponentProvider.swift; sourceTree = "<group>"; };
 		B0A7FC431FBE891400F90D9C /* PostListComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostListComponent.swift; sourceTree = "<group>"; };
+		B0A7FC451FBE8E7800F90D9C /* MockPostDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockPostDataProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +156,7 @@
 				B0A7FC3F1FBE883D00F90D9C /* PostDataProvider+IndexPath.swift */,
 				B0A7FC431FBE891400F90D9C /* PostListComponent.swift */,
 				B0A7FC411FBE88E300F90D9C /* PostListComponentProvider.swift */,
+				B0A7FC451FBE8E7800F90D9C /* MockPostDataProvider.swift */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				B02DD1F01FBDF050003E2D69 /* LandingViewController.swift in Sources */,
 				B0A7FC351FBE74EB00F90D9C /* Identifiable.swift in Sources */,
 				B0A7FC3C1FBE867500F90D9C /* PostListTableViewController.swift in Sources */,
+				B0A7FC461FBE8E7800F90D9C /* MockPostDataProvider.swift in Sources */,
 				B0A7FC421FBE88E300F90D9C /* PostListComponentProvider.swift in Sources */,
 				B0A7FC281FBDD08200F90D9C /* ComponentComposer+IndexPath.swift in Sources */,
 				B0A7FC441FBE891400F90D9C /* PostListComponent.swift in Sources */,

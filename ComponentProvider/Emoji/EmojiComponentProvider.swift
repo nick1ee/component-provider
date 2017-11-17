@@ -54,9 +54,11 @@ public final class EmojiComponentProvider: ComponentProvider {
 
     public final func update() {
 
-        emojiViewController.view.backgroundColor = .black
+        let view = emojiViewController.view!
 
-        emojiViewController.view.frame = CGRect(
+        view.backgroundColor = .black
+
+        view.frame = CGRect(
             origin: .zero,
             size: contentSize
         )
