@@ -11,11 +11,11 @@
 import UIKit
 
 public protocol ComponentComposer {
-    
+
     func numberOfComponentProviders() -> Int
-    
+
     func componentProvider(at index: Int) -> ComponentProvider
-    
+
     func index(of componentProvider: ComponentProvider) -> Int?
-    
+
 }

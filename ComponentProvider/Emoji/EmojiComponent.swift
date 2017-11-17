@@ -9,9 +9,9 @@
 // MARK: - EmojiComponent
 
 public struct EmojiComponent: Component {
-    
+
     // MARK: Property
-    
+
     public var emoji: String?
-    
+
 }

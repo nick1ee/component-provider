@@ -11,12 +11,12 @@
 import UIKit
 
 public protocol ComponentProviderDelegate: class {
-    
+
     func componentProviderDidUpdate(_ componentProvider: ComponentProvider)
-    
+
     func componentProvider(
         _ componentProvider: ComponentProvider,
         didFailWith error: Error
     )
-    
+
 }
