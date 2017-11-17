@@ -37,6 +37,19 @@ public final class PostListComponentProvider: ComponentProvider {
 
     public final var contentSize: CGSize = .zero
 
+    public final weak var postDataProvider: PostDataProvider? {
+
+        didSet {
+
+            setUpPostDataProvider(
+                postDataProvider,
+                for: postListTableViewController
+            )
+
+        }
+
+    }
+
     // MARK: Init
 
     public init() {
@@ -52,7 +65,23 @@ public final class PostListComponentProvider: ComponentProvider {
 
     // MARK: Update
 
-    public final func update() { }
+    public final func update() {
+
+        guard
+            let postDataProvider = postDataProvider
+        else {
+
+            componentProviderDelegate?.componentProviderDidUpdate(self)
+
+            return
+
+        }
+
+        postDataProvider.dataProviderDelegate = self
+
+        postDataProvider.fetch()
+
+    }
 
     // MARK: Set Up
 
@@ -60,5 +89,34 @@ public final class PostListComponentProvider: ComponentProvider {
         _ component: PostListComponent,
         for viewController: PostListTableViewController
     ) { }
+
+    fileprivate final func setUpPostDataProvider(
+        _ dataProvider: PostDataProvider?,
+        for viewController: PostListTableViewController
+    ) { viewController.postDataProvider = dataProvider }
+
+}
+
+// MARK: - PostDataProviderDelegate
+
+extension PostListComponentProvider: PostDataProviderDelegate {
+
+    public func dataProviderDidFetch(_ dataProvider: PostDataProvider) {
+
+        componentProviderDelegate?.componentProviderDidUpdate(self)
+
+    }
+
+    public func dataProvider(
+        _ dataProvider: PostDataProvider,
+        didFailWith error: Error
+    ) {
+
+        componentProviderDelegate?.componentProvider(
+            self,
+            didFailWith: error
+        )
+
+    }
 
 }
